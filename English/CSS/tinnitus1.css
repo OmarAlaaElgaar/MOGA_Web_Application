@@ -1,0 +1,341 @@
+.section {
+  background-color: rgba(255, 255, 255, 0.8);  
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 18px;
+}
+
+.hamburger-menu {
+position: fixed;
+top: 20px;
+left: 20px;
+z-index: 1000;
+}
+
+.menu__btn,
+.menu__item {
+cursor: pointer;
+}
+
+.menu__btn,
+.menu__item:hover {
+color: #0e2431;
+}
+
+.menu__box {
+list-style-type: none;
+padding: 0;
+margin: 0;
+box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+border-radius: 8px;
+position: absolute;
+top: 60px;
+left: 20px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu__item {
+padding: 1rem;
+text-align: center;
+}
+
+#menu__toggle:checked+.menu__btn+.menu__box {
+opacity: 1;
+visibility: visible;
+}
+
+.menu__box {
+display: block;
+position: fixed;
+top: 0;
+left: -100%;
+width: 300px;
+height: 100%;
+margin: 0;
+padding: 80px 0;
+list-style: none;
+box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+transition-duration: .25s;
+background-color: white;
+}
+
+
+/* Animation */
+
+.parallax>use {
+animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+
+@keyframes move-forever {
+0% {
+  transform: translate3d(-90px, 0, 0);
+}
+
+100% {
+  transform: translate3d(85px, 0, 0);
+}
+}
+
+
+/* Hamburger Menu Code */
+#menu__toggle {
+opacity: 0;
+}
+
+#menu__toggle:checked + .menu__btn > span {
+transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+top: 0;
+transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+left: 0 !important;
+}
+
+.menu__btn {
+position: fixed;
+top: 20px;
+left: 20px;
+width: 26px;
+height: 26px;
+cursor: pointer;
+z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: black;
+transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+content: '';
+top: -8px;
+}
+
+.menu__btn > span::after {
+content: '';
+top: 8px;
+}
+
+.menu__item {
+display: block;
+padding: 12px 24px;
+color: black;
+font-family: 'Roboto', sans-serif;
+font-size: 20px;
+font-weight: 600;
+text-decoration: none;
+transition-duration: .25s;
+}
+
+.menu__item:hover {
+background-color: #CFD8DC;
+}
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+margin: 0;
+background-image: url('https://wallpaperaccess.com/full/5035443.jpg');
+background-size: cove;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+
+
+h1 {
+font-family: 'Denk One', sans-serif;
+font-weight: 300;
+letter-spacing: 2px;
+font-size: 100px;
+}
+
+p {
+font-family: 'Lato', sans-serif;
+letter-spacing: 1px;
+font-size: 14px;
+color: #333333;
+}
+
+@keyframes animate {
+from {
+  transform: rotate(0deg);
+}
+
+to {
+  transform: rotate(360deg);
+}
+}
+
+header {
+  background-color: white;  
+  padding: 0.5rem;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 60px;
+  text-align: center;
+  color: black;
+}
+
+.header {
+position: relative;
+text-align: center;
+background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+color: white;
+}
+
+.logo {
+width: 50px;
+fill: white;
+padding-right: 15px;
+display: inline-block;
+vertical-align: middle;
+}
+
+.inner-header {
+height: 65vh;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.flex {
+/* Flexbox for containers */
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.waves {
+position: relative;
+width: 100%;
+height: 15vh;
+margin-bottom: -7px;
+/* Fix for safari gap */
+min-height: 100px;
+max-height: 150px;
+}
+
+.content {
+position: relative;
+height: 20vh;
+text-align: center;
+background-color: white;
+}
+
+.cssbuttons-io-button {
+background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+color: white;
+font-family: inherit;
+padding: 0.35em;
+padding-left: 1.2em;
+font-size: 17px;
+font-weight: 500;
+border-radius: 0.9em;
+border: none;
+letter-spacing: 0.05em;
+display: flex;
+align-items: center;
+box-shadow: inset 0 0 1.6em -0.6em #714da6;
+overflow: hidden;
+position: relative;
+height: 2.8em;
+padding-right: 3.3em;
+cursor: pointer;
+float: right;
+}
+
+.cssbuttons-io-button .icon {
+background: white;
+margin-left: 1em;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.2em;
+width: 2.2em;
+border-radius: 0.7em;
+box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+right: 0.3em;
+transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+width: 1.1em;
+transition: transform 0.3s;
+color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+transform: scale(0.95);
+}
+
+@media screen and (max-width: 1024px) {
+ 
+  .section {
+    background-color: rgba(255, 255, 255, 0.8);  
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 330px;
+  }
+  
+}
